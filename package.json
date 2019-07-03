@@ -1,37 +1,41 @@
 {
-	"name": "machina.promise",
-	"version": "0.1.1",
-	"author": "Doug Neiner <dneiner@appendto.com>",
-	"description": "A lightweight Promises/A compliant implementation for projects already using the machina state machine library.",
-	"scripts": {
-		"test": "mocha spec --reporter spec && promise-tests all test/machina.promise.adapter.js"
-	},
-	"main" : "lib/node/machina.promise.js",
-	"repository" : {
-        "type" : "git",
-        "url" : "git://github.com/a2labs/machina.promise.git"
+  "name": "machina.promise",
+  "version": "0.1.1",
+  "author": "Doug Neiner <dneiner@appendto.com>",
+  "description": "A lightweight Promises/A compliant implementation for projects already using the machina state machine library.",
+  "scripts": {
+    "test": "mocha spec --reporter spec && promise-tests all test/machina.promise.adapter.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "main": "lib/node/machina.promise.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/a2labs/machina.promise.git"
+  },
+  "keywords": [
+    "machina",
+    "promises"
+  ],
+  "dependencies": {
+    "underscore": ">=1.4",
+    "machina": ">=0.3",
+    "snyk": "^1.189.0"
+  },
+  "devDependencies": {
+    "expect.js": "",
+    "mocha": "",
+    "promise-tests": ""
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://opensource.org/licenses/MIT"
     },
-	"keywords": [
-		"machina",
-		"promises"
-	],
-	"dependencies": {
-		"underscore": ">=1.4",
-		"machina": ">=0.3"
-	},
-	"devDependencies": {
-		"expect.js": "",
-		"mocha": "",
-		"promise-tests": ""
-	},
-	 "licenses" : [
-        {
-            "type" : "MIT",
-            "url" : "http://opensource.org/licenses/MIT"
-        },
-        {
-            "type" : "GPLv2",
-            "url" : "http://opensource.org/licenses/GPL-2.0"
-        }
-    ]
+    {
+      "type": "GPLv2",
+      "url": "http://opensource.org/licenses/GPL-2.0"
+    }
+  ],
+  "snyk": true
 }
